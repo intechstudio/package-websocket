@@ -1,0 +1,31 @@
+{
+  "name": "package-websocket",
+  "version": "1.0.0",
+  "description": "Websocket Sample Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "install:components": "cd ./components && npm install",
+    "build:components": "cd ./components && npm run build",
+    "dev:components": "cd ./components && npm run dev",
+    "postinstall": "run-p install:*",
+    "build": "run-p build:*",
+    "dev": "run-p dev:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "grid_editor": {
+    "componentsPath": "components/dist/components.js",
+    "preferenceComponent": "websocket-preference",
+    "shortDescription": "Customize this package to your needs!"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "npm-run-all": "^4.1.5"
+  }
+}
